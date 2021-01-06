@@ -1,0 +1,452 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>我的技术十年(2) - 项目篇 | Joecliff&#39;s Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Joecliff">
+    
+    <meta name="description" content="工作中经历的大小项目很多。以下列出对我个人比较有价值的，大部分由我主导技术架构和核心代码，并带队开发。
+重要项目(时间先后)标识印刷业生产管理系统(3个月+)技术栈：Extjs, Java, 电信托管linux服务器
+这个是我接触的第一个正规大项目。
+该项目的目的是梳理通公司生产部门的业务流程，最大">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <div id="wrapper">
+        <header>
+          <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Joecliff&#39;s Tech Blog" title="Joecliff&#39;s Tech Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Joecliff&#39;s Tech Blog">Joecliff&#39;s Tech Blog</a></h1>
+				<h2 class="blog-motto">Enjoy thinking and coding ~</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">存档</a></li>
+					
+						<li><a href="/about-me">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:joecliff.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+        </header>
+        <div id="container">
+          <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a target="_blank" rel="noopener" href="//ten-years-of-my-tech-life---projects.html" title="我的技术十年(2) - 项目篇" itemprop="url">我的技术十年(2) - 项目篇</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://joecliff.com" title="Joecliff">Joecliff</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2017-04-22T13:36:22.000Z" itemprop="datePublished">2017年04月22日</time>
+    <!--Updated:<time datetime="2021-01-06T06:41:56.176Z" itemprop="dateModified">2021年01月06日</time>-->
+    <!---->
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E9%A1%B9%E7%9B%AE-%E6%97%B6%E9%97%B4%E5%85%88%E5%90%8E"><span class="toc-number">1.</span> <span class="toc-text">重要项目(时间先后)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E5%8D%B0%E5%88%B7%E4%B8%9A%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-3%E4%B8%AA%E6%9C%88"><span class="toc-number">1.1.</span> <span class="toc-text">标识印刷业生产管理系统(3个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E8%A1%8C%E4%B8%9A%E5%AE%9A%E5%88%B6OA-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.2.</span> <span class="toc-text">标识行业定制OA(半年+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EPD%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E4%B8%AD%E8%BD%AC-2%E4%B8%AA%E6%9C%88"><span class="toc-number">1.3.</span> <span class="toc-text">EPD批量数据中转(2个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E4%B8%9A%E5%8A%A1%E5%B9%B3%E5%8F%B0%E9%87%8D%E5%86%99-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.4.</span> <span class="toc-text">内部业务平台重写(半年+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9B%E5%BA%94%E5%95%86%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%8F%8A%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1%E4%BA%91%E7%AB%AF%E5%8C%96-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.5.</span> <span class="toc-text">供应商数据处理及接口服务云端化(半年+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E4%BD%9C%E6%96%B9%E6%95%B0%E6%8D%AE%E8%87%AA%E5%8A%A8%E6%95%B4%E5%90%88%E7%B3%BB%E7%BB%9F-2%E4%B8%AA%E6%9C%88"><span class="toc-number">1.6.</span> <span class="toc-text">合作方数据自动整合系统(2个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E4%B8%9A%E7%89%88%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E5%B9%B3%E5%8F%B0%E5%92%8C%E9%94%80%E5%94%AE-%E6%8A%A5%E4%BB%B7%E7%BD%91%E7%AB%99-%E8%BF%91%E4%B8%80%E5%B9%B4"><span class="toc-number">1.7.</span> <span class="toc-text">行业版企业信息化平台和销售&#x2F;报价网站(近一年)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FPMS-2%E4%B8%AA%E6%9C%88"><span class="toc-number">1.8.</span> <span class="toc-text">项目管理系统PMS(2个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Opencart%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E5%BC%BA%E5%8C%96-%E5%BE%AE%E6%9C%8D%E5%8A%A1-3%E4%B8%AA%E6%9C%88"><span class="toc-number">1.9.</span> <span class="toc-text">Opencart电商系统强化+微服务(3个月)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API%E4%BB%BF%E7%9C%9F%E5%B9%B3%E5%8F%B0-1%E4%B8%AA%E6%9C%88"><span class="toc-number">1.10.</span> <span class="toc-text">API仿真平台(1个月)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9FPHP%E7%8B%AC%E7%AB%8B%E9%83%A8%E7%BD%B2%E7%89%88%E6%9C%AC-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.11.</span> <span class="toc-text">移动电商系统PHP独立部署版本(半年)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9FSaas%E7%89%88%E6%9C%AC-%E4%B8%80%E5%B9%B4"><span class="toc-number">1.12.</span> <span class="toc-text">移动电商系统Saas版本(一年)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+		</div>
+		
+		<p>工作中经历的大小项目很多。以下列出对我个人比较有价值的，大部分由我主导技术架构和核心代码，并带队开发。</p>
+<h2 id="重要项目-时间先后"><a href="#重要项目-时间先后" class="headerlink" title="重要项目(时间先后)"></a>重要项目(时间先后)</h2><h3 id="标识印刷业生产管理系统-3个月"><a href="#标识印刷业生产管理系统-3个月" class="headerlink" title="标识印刷业生产管理系统(3个月+)"></a>标识印刷业生产管理系统(3个月+)</h3><p>技术栈：Extjs, Java, 电信托管linux服务器</p>
+<p>这个是我接触的第一个正规大项目。</p>
+<p>该项目的目的是梳理通公司生产部门的业务流程，最大化实现流程自动化，如生产计划安排、仓库出入库管理、原材料采购、图纸管理等。</p>
+<p>我是中途进入这个项目的，但是后面接管了项目的开发和升级工作。</p>
+<p>通过这个项目， 让我完成了从接近零基础的前端知识加基本的Java开发知识，到迅速掌握Extjs这种重量级前端框架配合后端api调用开发方式的知识积累。</p>
+<p>回想起来，一开始为了迅速进入状态，自已强迫症式的深夜加班经历还历历在目。。。</p>
+<h3 id="标识行业定制OA-半年"><a href="#标识行业定制OA-半年" class="headerlink" title="标识行业定制OA(半年+)"></a>标识行业定制OA(半年+)</h3><p>技术栈：Extjs, Java, 电信托管linux服务器</p>
+<p>这个项目是上面生产系统完成后，公司余下业务自动化的又一关键系统。包含了商品管理，订单处理，采购管理，财务管理，及其他日常办公流程业务。</p>
+<p>很遗憾，我们的项目经理那时候离开了。而我被看中，成了代理经理，带着几个小伙伴继续项目。</p>
+<p>作为一个技术界新人，没前辈带，只能自已摸索。然而幸运的是，这确实也促使我养成了独立思考和解决问题的习惯。</p>
+<p>几个月后，我带着几个新人，成功完成了这个项目，同时也积累了大量的技术笔记。</p>
+<h3 id="EPD批量数据中转-2个月"><a href="#EPD批量数据中转-2个月" class="headerlink" title="EPD批量数据中转(2个月+)"></a>EPD批量数据中转(2个月+)</h3><p>技术栈：Java, Spring Batch，SqlServer</p>
+<p>这个是我在第二家公司完成的第一个项目。</p>
+<p>项目目标是为供应商服务器和公司服务器的大数据量(单次G级以上大小)交互提供统一接口，可通过定时、API调用等方式促发导入和导出数据。但要求不能对中心服务器造成太大压力，且保证数据处理速度。</p>
+<p>在服务器资源限制的条件下，我们选择了Spring Batch作为架构实现，大量使用了多线程优化方案。</p>
+<p>这个项目让我有了不错的多线程、大数据批量处理实践机会。</p>
+<h3 id="内部业务平台重写-半年"><a href="#内部业务平台重写-半年" class="headerlink" title="内部业务平台重写(半年+)"></a>内部业务平台重写(半年+)</h3><p>技术栈：Java, Spring, FreeMarker, PostgreSQL, Maven, AWS, S3</p>
+<p>这个项目是公司系统AWS化的一部分。</p>
+<p>老的内部业务平台是近10年前写的，是定制系统，柔和了很多不同类型的功能，如供应商管理，客户管理等。并且高级框架和特性使用很少：老Java平台，纯jsp渲染，项目间依赖靠手动配置…</p>
+<p>由于业务牵扯很多方面，并且新需求还一直有提出，每次修改、测试、上线相当繁琐。</p>
+<p>所以目标很明确，就是复制并梳理老的管理系统业务，同时用更现代的方式构建新系统，方便后期扩展和维护。</p>
+<p>在前一个项目搞成功后，leader让我来做AWS和新的Java模块化开发调研。</p>
+<p>AWS具体技术的采用主要是来自leader经验，用了EC2服务器、RDS的PostgreSQL数据库、S3做图片和文件存储等。</p>
+<p>Java框架调研后，锁定了Maven多模块依赖方式和依赖发布方式，使用强大的Freemarker模板代替了JSP。</p>
+<h3 id="供应商数据处理及接口服务云端化-半年"><a href="#供应商数据处理及接口服务云端化-半年" class="headerlink" title="供应商数据处理及接口服务云端化(半年+)"></a>供应商数据处理及接口服务云端化(半年+)</h3><p>技术栈：Java, Spring, Hadoop Map/Reduce, AWS, S3, DynamoDB, ElasticSearch</p>
+<p>这个项目是公司系统AWS化的又一大环节。</p>
+<p>由于业务发展，之前的供应商交互数据处理服务处理能力需要不断提升。但是老的服务器处理能力有限，卡顿几率越来越大，性能遇到瓶颈。</p>
+<p>通过采用AWS的Hadoop集群计算能力，可低成本解决这个问题，方便的通过增减机器调整服务计算能力。</p>
+<p>那时候Hadoop的概念在国内还没这么火，对分布式并行计算、函数式编程、map reduce之类的概念也不是很了解。</p>
+<p>调查后，发现Map Reduce其实相当好理解。原来只有昂贵的大型机才能解决的问题，可以用低成本的普通电脑解决了。</p>
+<p>同时借助aws领先的云端基础设施方案，做大数据计算、存储变成了相对简单的事情。</p>
+<h3 id="合作方数据自动整合系统-2个月"><a href="#合作方数据自动整合系统-2个月" class="headerlink" title="合作方数据自动整合系统(2个月+)"></a>合作方数据自动整合系统(2个月+)</h3><p>技术栈：nodejs, phantonjs, casperjs</p>
+<p>那时候公司的数据主要来自于近一千家合作方。</p>
+<p>原来都是需要人工操作，定时去对方网站上下载CSV等格式的数据文件，然后整理校对后导入自已的系统。</p>
+<p>这个事情耗费很多人力，如果能自动化，可以实现很好的效益。</p>
+<p>于是我提议由我来牵头构建个系统，自动处理大部分下载任务和其他能自动化的操作。</p>
+<p>调查后发现phaltonjs + nodejs组合可以很好的满足类似的需求：phaltonjs提供可编程浏览器环境模拟人工操作，nodejs配合处理其他逻辑部分。</p>
+<p>项目大幅提高了数据处理效率，降低了出错概率。</p>
+<p>通过这个项目，我的”后端JS”能力也得到了强化。</p>
+<h3 id="行业版企业信息化平台和销售-报价网站-近一年"><a href="#行业版企业信息化平台和销售-报价网站-近一年" class="headerlink" title="行业版企业信息化平台和销售/报价网站(近一年)"></a>行业版企业信息化平台和销售/报价网站(近一年)</h3><p>技术栈：Java, Nodejs, Solr, 分布式系统, 腾讯云, 又拍</p>
+<p>这个是回到第一个公司后的主要项目。</p>
+<p>在立足工业品生产、销售领域之后，老板希望把之前的软件积累和想法整理，并做成标准化的行业软件方案。</p>
+<p>讨论很久后，我们调整了之前一个系统业务全包的形式，代之以开发多个独立，又可互联的子系统，如生产系统，产品管理系统，文件图片管理系统，仓储系统，订单管理系统，财务系统等。<br>每个系统作为可独立开关/购买的模块对外展现。同时考虑到做网站营销的需求，支持设置多个网站后台，可管理多个对外销售/询价网站的数据源。</p>
+<p>对于电商展示网站，那时候同时对传统的Java一站式搞定前后端系统的方式进行了反思，最后和淘宝的方案一样，让前端同学直接使用上手较快的nodejs调用后端api直接构建网站，效果不错。</p>
+<p>限于传统行业的背景，这个项目商业化道路并不顺利，但是不管是沟通、思辨、技术解决的方案、团队管理、最终的结果，对我来说都有极大的意义。</p>
+<p><img src="/img/article/emp1.png" alt="Drawing"  style="width: 48%;display:inline-block;"/>&nbsp;<img src="/img/article/emp2.png" alt="Drawing"  style="width: 48%;display:inline-block;"/></p>
+<h3 id="项目管理系统PMS-2个月"><a href="#项目管理系统PMS-2个月" class="headerlink" title="项目管理系统PMS(2个月+)"></a>项目管理系统PMS(2个月+)</h3><p>技术栈：Nodejs, Koa, Angularjs, Bootstrap, MongoDB</p>
+<p>这个项目是我进入朋友公司前，花了两个月业余时间给他们定制的，后面又经过了很多次改进。</p>
+<p>那时候待办事项型的管理工具不少，比如国外的Trello, 国内的worktile, Teambition。但是作为项目管理工具来说都有所欠缺。</p>
+<p>同时传统太重量级的管理工具过于繁琐，而且形式不够现代和方便。</p>
+<p>其实我们就是希望保留Teambition等现代工具方便快捷的形式的前提下，再多些需求管理和内部定制功能就可以。</p>
+<p>这个项目最后采用敏捷项目常用的白板展现形式，配以团队、权限、需求、文档、知识库管理等功能作为整体需求。</p>
+<p>因为是一个人开发，前后端都要处理，所以后端选择了比较轻量的nodejs和方便的koa开发框架，前端直接用angularjs+bootstrap搞定。</p>
+<p><img src="/img/article/pms1.png" alt="Drawing"  style="width: 48%;display:inline-block;"/>&nbsp;<img src="/img/article/pms2.png" alt="Drawing"  style="width: 48%;display:inline-block;"/><br><img src="/img/article/pms3.png" alt="Drawing"  style="width: 48%;display:inline-block;"/>&nbsp;<img src="/img/article/pms4.png" alt="Drawing"  style="width: 48%;display:inline-block;"/></p>
+<h3 id="Opencart电商系统强化-微服务-3个月"><a href="#Opencart电商系统强化-微服务-3个月" class="headerlink" title="Opencart电商系统强化+微服务(3个月)"></a>Opencart电商系统强化+微服务(3个月)</h3><p>技术栈: PHP, Opencart, Java</p>
+<p>基于Opencart开源电商系统的定制开发，是第三个公司初期的主业。</p>
+<p>然而因为是Opencart(PHP)第一代，工程化开发支持相对较弱（比如没有统一的服务分层）, 加上PHP的一些语言限制和特点（比如基于多进程创建/销毁模型，不支持定时），造成开发、运行效率不算高。</p>
+<p>于是结合之前Java平台的经验，进行重构和强化。基本思路就是发挥原有框架和语言的长处，再用其他方式来弥补其短处：抽取独立业务分层、使用composer管理依赖、开发java微服务作为外部独立的补充。</p>
+<p>改造后的体系总体上开发效率提高了1倍以上，并迅速应用到了新的项目中去。</p>
+<h3 id="API仿真平台-1个月"><a href="#API仿真平台-1个月" class="headerlink" title="API仿真平台(1个月)"></a>API仿真平台(1个月)</h3><p>技术栈：Nodejs, Koa, Angularjs, Bootstrap, Mysql</p>
+<p>那时候公司有很多前后端分离的项目，但是并行开发经常需要前端等后端接口、后端等前端反馈。</p>
+<p>经过调查，解决这个问题的最有效办法是先把API接口规范定下来，然后提供一个模拟接口调用方式。</p>
+<p>传统的写静态json的方式对于前端来说是可以的，但是也有明显的问题：1. 没有API文档；2. 后端人员要参考、或者修改不方便。</p>
+<p>所以最终的方案是，基于简单的用户权限区分和版本管理策略，提供统一的api文档编辑入口，可直接设置模拟数据。并有单独的模拟api入口地址方便测试。</p>
+<p>平台做完后经过了很多项目实际检验，结果令人满意。后来发现，百度阿里等也有类似的方案，但是看起来开发和部署成本都不低。</p>
+<p><img src="/img/article/api_simulate1.png" alt="Drawing"  style="width: 48%;display:inline-block;"/>&nbsp;<img src="/img/article/api_simulate2.png" alt="Drawing"  style="width: 48%;display:inline-block;"/></p>
+<h3 id="移动电商系统PHP独立部署版本-半年"><a href="#移动电商系统PHP独立部署版本-半年" class="headerlink" title="移动电商系统PHP独立部署版本(半年)"></a>移动电商系统PHP独立部署版本(半年)</h3><p>技术栈: PHP, Java, Mysql, Ionic</p>
+<p>这个项目是公司战略升级后的产物：电商业务向移动端更进一步，前端覆盖PC、移动网站/微网站、APP。</p>
+<p>之前重点依赖的Opencart代码不够现代，改造后的开发相率还是跟不上业务的发展。根据公司业务目标，这种情况必须尽快改变。</p>
+<p>所以在继续强化Java微服务的基础上，用更标准的业务模块化、分层模型重写和完善了PHP版本的电商系统，同时去掉了OC中不适合实际业务的设计（如遍布的多语言支持，用到的场景少，维护成本又高）。</p>
+<p>同时重点开发了移动APP端作为主推部分。</p>
+<h3 id="移动电商系统Saas版本-一年"><a href="#移动电商系统Saas版本-一年" class="headerlink" title="移动电商系统Saas版本(一年)"></a>移动电商系统Saas版本(一年)</h3><p>技术栈: Java, Ionic, Mysql, Redis, Solr, Jenkins CI</p>
+<p>以上的PHP版本在顺利运行1年之后，有几个问题有了扩大影响的苗头：</p>
+<ul>
+<li>一个是PHP人员招聘在这边比较费力，很多社招的PHP工程师都是前端出家，其实没有太强的后端逻辑能力，而校招对于小公司来说又有很大风险；</li>
+<li>另一个是公司想做saas化电商产品进行推广，对高端客户再进行定制。而老版本并不是为了做saas而设计的，要支持saas，可选的方案只能是共享形式多次部署同一套代码或者用docker等容器化方式。对开发和运维一致性会造成很大问题。</li>
+</ul>
+<p>几经考虑，最终决定还是转向Java平台:</p>
+<ul>
+<li>Java各层次人才存量比较大，加上我们原来的后端开发都有Java经验</li>
+<li>Saas的经典做法是数据隔离，要求单个服务实例的性能要尽可能好，并且足够稳定。这方面Java是佼佼者。</li>
+</ul>
+<p>在综合考虑了项目的主要目标和当时的情况后，制定了如下方案并实施：</p>
+<p><img src="/img/article/design_target_solution.svg" alt="图示"></p>
+<p><img src="/img/article/uplus1.png" alt="Drawing" style="width: 48%;display:inline-block;"/>&nbsp;<img src="/img/article/uplus3.png" alt="Drawing" style="width: 48%;display:inline-block;"/></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>每一个项目都有其独特的业务背景和要求。通过沟通，梳理清楚业务，并建模转换为系统设计，是很有价值的。</p>
+<p>每个项目都是非常好的架构实践平台，成功的经验可以复制，失败的经验可以避免。</p>
+<p>同时，做项目和管公司可能也有很多相似性，掌控者都需要站得高，看得远，全局把控各种资源，个人能力得以不断强化。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/回忆/">回忆</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/">职业生涯</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://joecliff.com/ten-years-of-my-tech-life---projects.html" data-title="我的技术十年(2) - 项目篇 | Joecliff&#39;s Tech Blog" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a target="_blank" rel="noopener" href="//ten-years-of-my-tech-life---dev-language.html" title="我的技术十年(3) - 开发语言">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  我的技术十年(3) - 开发语言</span>
+</a>
+</div>
+
+
+<div class="next">
+<a target="_blank" rel="noopener" href="//ten-years-of-my-tech-life---intro.html"  title="我的技术十年(1) - 序">
+ <strong>NEXT:</strong><br/> 
+ <span>我的技术十年(1) - 序
+</span>
+</a>
+</div>
+
+</nav>
+
+	<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "27bac76fc0894a8ba4295a688ea48e20",
+        target: "cloud-tie-wrapper"
+    };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+</div>
+          <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E9%A1%B9%E7%9B%AE-%E6%97%B6%E9%97%B4%E5%85%88%E5%90%8E"><span class="toc-number">1.</span> <span class="toc-text">重要项目(时间先后)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E5%8D%B0%E5%88%B7%E4%B8%9A%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F-3%E4%B8%AA%E6%9C%88"><span class="toc-number">1.1.</span> <span class="toc-text">标识印刷业生产管理系统(3个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E8%A1%8C%E4%B8%9A%E5%AE%9A%E5%88%B6OA-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.2.</span> <span class="toc-text">标识行业定制OA(半年+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EPD%E6%89%B9%E9%87%8F%E6%95%B0%E6%8D%AE%E4%B8%AD%E8%BD%AC-2%E4%B8%AA%E6%9C%88"><span class="toc-number">1.3.</span> <span class="toc-text">EPD批量数据中转(2个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E4%B8%9A%E5%8A%A1%E5%B9%B3%E5%8F%B0%E9%87%8D%E5%86%99-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.4.</span> <span class="toc-text">内部业务平台重写(半年+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9B%E5%BA%94%E5%95%86%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%8F%8A%E6%8E%A5%E5%8F%A3%E6%9C%8D%E5%8A%A1%E4%BA%91%E7%AB%AF%E5%8C%96-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.5.</span> <span class="toc-text">供应商数据处理及接口服务云端化(半年+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E4%BD%9C%E6%96%B9%E6%95%B0%E6%8D%AE%E8%87%AA%E5%8A%A8%E6%95%B4%E5%90%88%E7%B3%BB%E7%BB%9F-2%E4%B8%AA%E6%9C%88"><span class="toc-number">1.6.</span> <span class="toc-text">合作方数据自动整合系统(2个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E4%B8%9A%E7%89%88%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E5%B9%B3%E5%8F%B0%E5%92%8C%E9%94%80%E5%94%AE-%E6%8A%A5%E4%BB%B7%E7%BD%91%E7%AB%99-%E8%BF%91%E4%B8%80%E5%B9%B4"><span class="toc-number">1.7.</span> <span class="toc-text">行业版企业信息化平台和销售&#x2F;报价网站(近一年)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9FPMS-2%E4%B8%AA%E6%9C%88"><span class="toc-number">1.8.</span> <span class="toc-text">项目管理系统PMS(2个月+)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Opencart%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E5%BC%BA%E5%8C%96-%E5%BE%AE%E6%9C%8D%E5%8A%A1-3%E4%B8%AA%E6%9C%88"><span class="toc-number">1.9.</span> <span class="toc-text">Opencart电商系统强化+微服务(3个月)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API%E4%BB%BF%E7%9C%9F%E5%B9%B3%E5%8F%B0-1%E4%B8%AA%E6%9C%88"><span class="toc-number">1.10.</span> <span class="toc-text">API仿真平台(1个月)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9FPHP%E7%8B%AC%E7%AB%8B%E9%83%A8%E7%BD%B2%E7%89%88%E6%9C%AC-%E5%8D%8A%E5%B9%B4"><span class="toc-number">1.11.</span> <span class="toc-text">移动电商系统PHP独立部署版本(半年)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9FSaas%E7%89%88%E6%9C%AC-%E4%B8%80%E5%B9%B4"><span class="toc-number">1.12.</span> <span class="toc-text">移动电商系统Saas版本(一年)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/理论实践/" title="理论实践">理论实践<sup>2</sup></a></li>
+		
+			<li><a href="/categories/职业生涯/" title="职业生涯">职业生涯<sup>6</sup></a></li>
+		
+			<li><a href="/categories/随想/" title="随想">随想<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>1</sup></a></li>
+		
+			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/java/" title="java">java<sup>1</sup></a></li>
+		
+			<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		
+			<li><a href="/tags/pacman/" title="pacman">pacman<sup>1</sup></a></li>
+		
+			<li><a href="/tags/rest-api/" title="rest api">rest api<sup>1</sup></a></li>
+		
+			<li><a href="/tags/回忆/" title="回忆">回忆<sup>6</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+        </div>
+        <footer><div id="footer">
+    
+    <div class="line">
+        <span></span>
+        <div class="author"></div>
+    </div>
+    
+    
+    <section class="info">
+        <p> I am a software engineer since 2008. <br/>
+            I like cool stuff and this is my blog to share with you. </p>
+    </section>
+    
+    <div class="social-font" class="clearfix">
+        
+        
+        
+        <a href="https://github.com/joecliff" target="_blank" title="github"></a>
+        
+        
+    </div>
+    <p class="copyright" style="font-family: sans-serif;font-size: 0.8em">
+        <!--Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by-->
+        <!--<a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a>-->
+        Copyright © 2021 Joecliff
+        |
+        <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">苏ICP备17050239号-1</a>
+        |
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32050602010304"
+           style="text-decoration:none;">
+            <span><img src="/img/beian.png" style="margin-bottom: -2px;width: 16px;height: 16px;"/>苏公网安备32050602010304号</span>
+        </a>
+    </p>
+</div>
+</footer>
+        <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+      </div>
+  </body>
+</html>

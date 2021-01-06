@@ -1,0 +1,420 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>高效的Eclipse设置 | Joecliff&#39;s Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Joecliff">
+    
+    <meta name="description" content="虽然本人不是绝对的开发工具/IDE控，但是深感优秀的工具绝对能让开发事半功倍。Eclipse是我们熟知的一款免费IDE，主要使用人群为java开发者。不过eclipse的默认配置并不一定是最优，跟IntelliJ IDEA这款商业IDE比较之下开发效率就会有不少差距。但是别急，eclipse有强大的">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <div id="wrapper">
+        <header>
+          <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Joecliff&#39;s Tech Blog" title="Joecliff&#39;s Tech Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Joecliff&#39;s Tech Blog">Joecliff&#39;s Tech Blog</a></h1>
+				<h2 class="blog-motto">Enjoy thinking and coding ~</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">存档</a></li>
+					
+						<li><a href="/about-me">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:joecliff.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+        </header>
+        <div id="container">
+          <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a target="_blank" rel="noopener" href="//efficient-eclipse-ide-setting.html" title="高效的Eclipse设置" itemprop="url">高效的Eclipse设置</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://joecliff.com" title="Joecliff">Joecliff</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-06-02T06:54:56.000Z" itemprop="datePublished">2014年06月02日</time>
+    <!--Updated:<time datetime="2021-01-06T06:41:56.179Z" itemprop="dateModified">2021年01月06日</time>-->
+    <!---->
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">设置项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">统一文件编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%A4%A7%E9%BB%98%E8%AE%A4%E6%8D%A2%E8%A1%8C%E9%95%BF%E5%BA%A6"><span class="toc-number">1.2.</span> <span class="toc-text">加大默认换行长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E6%8C%89%E4%BB%BB%E6%84%8F%E5%AD%97%E6%AF%8D%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E5%AE%8C%E6%88%90"><span class="toc-number">1.3.</span> <span class="toc-text">编辑器中按任意字母代码自动完成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E8%83%8C%E6%99%AF%E6%94%B9%E4%B8%BA%E6%8A%A4%E7%9C%BC%E7%BB%BF%E8%89%B2"><span class="toc-number">1.4.</span> <span class="toc-text">编辑器背景改为护眼绿色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E9%AB%98%E9%A2%91%E7%8E%87%E4%BD%BF%E7%94%A8%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%BA%E7%83%AD%E9%94%AE"><span class="toc-number">1.5.</span> <span class="toc-text">绑定高频率使用的菜单为热键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E6%97%B6%E8%87%AA%E5%8A%A8%E4%BF%AE%E6%AD%A3%E5%86%85%E5%AE%B9"><span class="toc-number">1.6.</span> <span class="toc-text">Java文件保存时自动修正内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4java%E8%8C%83%E5%9E%8B%E8%BF%87%E5%A4%9A%E9%AA%8C%E8%AF%81"><span class="toc-number">1.7.</span> <span class="toc-text">去除java范型过多验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E6%8E%89%E5%AE%9E%E6%97%B6%E9%AA%8C%E8%AF%81"><span class="toc-number">1.8.</span> <span class="toc-text">去掉实时验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%8F%E5%B0%91%E9%9D%9E%E5%BF%85%E8%A6%81%E5%90%AF%E5%8A%A8%E9%A1%B9"><span class="toc-number">1.9.</span> <span class="toc-text">减少非必要启动项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">2.</span> <span class="toc-text">插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spket"><span class="toc-number">2.1.</span> <span class="toc-text">spket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#start-explorer"><span class="toc-number">2.2.</span> <span class="toc-text">start explorer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emmet"><span class="toc-number">2.3.</span> <span class="toc-text">emmet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hibernate-tools"><span class="toc-number">2.4.</span> <span class="toc-text">hibernate tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OS-X-Eclipse-Launcher"><span class="toc-number">2.5.</span> <span class="toc-text">OS X Eclipse Launcher</span></a></li></ol></li></ol>
+		</div>
+		
+		<p>虽然本人不是绝对的开发工具/IDE控，但是深感优秀的工具绝对能让开发事半功倍。<br>Eclipse是我们熟知的一款免费IDE，主要使用人群为java开发者。不过eclipse的默认配置并不一定是最优，跟IntelliJ IDEA这款商业IDE比较之下开发效率就会有不少差距。<br>但是别急，eclipse有强大的插件/配置能力，好好利用下，就算不能超过，至少也可以类比下IDEA，让我们患鼠标手的几率减少点~ 。<br>以下是我总结的eclipse配置/使用经验，欢迎大家补充。</p>
+<h2 id="设置项目"><a href="#设置项目" class="headerlink" title="设置项目"></a>设置项目</h2><h3 id="统一文件编码"><a href="#统一文件编码" class="headerlink" title="统一文件编码"></a>统一文件编码</h3><blockquote>
+<p>Preferences - General - Workspace : Text file encoding 改为UTF-8</p>
+</blockquote>
+<h3 id="加大默认换行长度"><a href="#加大默认换行长度" class="headerlink" title="加大默认换行长度"></a>加大默认换行长度</h3><p>java为例（xml等其他类似)</p>
+<blockquote>
+<p>Preferences - Java - code style - formatter - new profile(based on builtin) - line wrapping - maximum line width: 120</p>
+</blockquote>
+<h3 id="编辑器中按任意字母代码自动完成"><a href="#编辑器中按任意字母代码自动完成" class="headerlink" title="编辑器中按任意字母代码自动完成"></a>编辑器中按任意字母代码自动完成</h3><p>默认需要按快捷键出现</p>
+<blockquote>
+<p>Preferences - Java - editor - Content Assist – Auto-Activation<br>– 修改auto activation triggers for java: .abc  ,应用，关闭Prefference<br>– File - Export - General- Preference - save<br>– search ‘abc’ in the file,modify abc to abcdefghijklmnopqrstuvwxyz , save<br>– File - Import - General– Preference …<br>若以后在设置Preferences的时候点击了OK，可能造成配置失效，重新执行以上步骤<br>JS编辑器spket的设置类似</p>
+</blockquote>
+<h3 id="编辑器背景改为护眼绿色"><a href="#编辑器背景改为护眼绿色" class="headerlink" title="编辑器背景改为护眼绿色"></a>编辑器背景改为护眼绿色</h3><p>Preferences - general - editors - Text Editors : 底部 background color -  自定义 RGB(204,232,207).</p>
+<h3 id="绑定高频率使用的菜单为热键"><a href="#绑定高频率使用的菜单为热键" class="headerlink" title="绑定高频率使用的菜单为热键"></a>绑定高频率使用的菜单为热键</h3><blockquote>
+<p>Preferences - general -keys</p>
+</blockquote>
+<ul>
+<li>content assistant : alt + j</li>
+<li>next editor: ctrl+tab</li>
+<li>override/imple…: method alt+i</li>
+</ul>
+<h3 id="Java文件保存时自动修正内容"><a href="#Java文件保存时自动修正内容" class="headerlink" title="Java文件保存时自动修正内容"></a>Java文件保存时自动修正内容</h3><blockquote>
+<p>Preferences - java - editor - save action，勾选：<br>Perform the selected actions on save<br>Organize imports<br>Additional actions 选择性添加</p>
+</blockquote>
+<h3 id="去除java范型过多验证"><a href="#去除java范型过多验证" class="headerlink" title="去除java范型过多验证"></a>去除java范型过多验证</h3><p>提高eclipse性能的几个关键点之一</p>
+<blockquote>
+<p> Preferences  - java - compiler - errors/warnings - generic types ,设置以下级别为忽略</p>
+<ul>
+<li> uunchecked generic type operation</li>
+<li> usage of a raw type</li>
+</ul>
+</blockquote>
+<h3 id="去掉实时验证"><a href="#去掉实时验证" class="headerlink" title="去掉实时验证"></a>去掉实时验证</h3><p>提高eclipse性能的几个关键点之一</p>
+<blockquote>
+<p>Preferences  - Validation, 第二列 （自动）Build项除了classpath dependency validation外全部去掉勾</p>
+</blockquote>
+<h3 id="减少非必要启动项"><a href="#减少非必要启动项" class="headerlink" title="减少非必要启动项"></a>减少非必要启动项</h3><p>提高eclipse性能的几个关键点之一</p>
+<blockquote>
+<p>General - startup and shutdown - 去除除了Emmet等必须项外的其他都去掉</p>
+</blockquote>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><h3 id="spket"><a href="#spket" class="headerlink" title="spket"></a>spket</h3><p>不错的js编辑器，直接代码提示，包括jQuery和ExtJs等</p>
+<blockquote>
+<p>update url: <a target="_blank" rel="noopener" href="http://www.agpad.com/update">http://www.agpad.com/update</a></p>
+</blockquote>
+<h3 id="start-explorer"><a href="#start-explorer" class="headerlink" title="start explorer"></a>start explorer</h3><p>增强eclipse同操作系统的交互能力，如调用cmd, 复制文件绝对路径等。<em>强力推荐</em></p>
+<blockquote>
+<p>update url: <a target="_blank" rel="noopener" href="http://basti1302.github.com/startexplorer/update/">http://basti1302.github.com/startexplorer/update/</a></p>
+</blockquote>
+<h3 id="emmet"><a href="#emmet" class="headerlink" title="emmet"></a>emmet</h3><p>zen coding for eclipse, 拒绝傻傻的手写全部html代码</p>
+<blockquote>
+<p>update url: <a target="_blank" rel="noopener" href="http://download.emmet.io/eclipse/updates/">http://download.emmet.io/eclipse/updates/</a><br>注意此插件安装完后会设置默认的热键，可能会和现有的冲突，建议适当去除:  general - keys - category 排列名为emmet的项</p>
+</blockquote>
+<h3 id="hibernate-tools"><a href="#hibernate-tools" class="headerlink" title="hibernate tools"></a>hibernate tools</h3><p>jpa entity同数据库表互相生成很方便</p>
+<blockquote>
+<p>使用eclipse内置marketplace搜索jboss tool，并选择hibernate。</p>
+</blockquote>
+<h3 id="OS-X-Eclipse-Launcher"><a href="#OS-X-Eclipse-Launcher" class="headerlink" title="OS X Eclipse Launcher"></a>OS X Eclipse Launcher</h3><p>解决mac下不能启动多个eclipse的问题</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://marketplace.eclipse.org/content/osx-eclipse-launcher#.U1Tf1-aSyvp">marketplace地址</a></p>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/IDE/">IDE</a><a href="/tags/eclipse/">eclipse</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/%E7%90%86%E8%AE%BA%E5%AE%9E%E8%B7%B5/">理论实践</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://joecliff.com/efficient-eclipse-ide-setting.html" data-title="高效的Eclipse设置 | Joecliff&#39;s Tech Blog" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a target="_blank" rel="noopener" href="//we-need-understand-the-mindset-of-marketers.html" title="我们都需要商人思维">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  我们都需要商人思维</span>
+</a>
+</div>
+
+
+<div class="next">
+<a target="_blank" rel="noopener" href="//hello-hexo.html"  title="Hello hexo">
+ <strong>NEXT:</strong><br/> 
+ <span>Hello hexo
+</span>
+</a>
+</div>
+
+</nav>
+
+	<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "27bac76fc0894a8ba4295a688ea48e20",
+        target: "cloud-tie-wrapper"
+    };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+</div>
+          <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E9%A1%B9%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">设置项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E4%B8%80%E6%96%87%E4%BB%B6%E7%BC%96%E7%A0%81"><span class="toc-number">1.1.</span> <span class="toc-text">统一文件编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%A4%A7%E9%BB%98%E8%AE%A4%E6%8D%A2%E8%A1%8C%E9%95%BF%E5%BA%A6"><span class="toc-number">1.2.</span> <span class="toc-text">加大默认换行长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E6%8C%89%E4%BB%BB%E6%84%8F%E5%AD%97%E6%AF%8D%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E5%AE%8C%E6%88%90"><span class="toc-number">1.3.</span> <span class="toc-text">编辑器中按任意字母代码自动完成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E8%83%8C%E6%99%AF%E6%94%B9%E4%B8%BA%E6%8A%A4%E7%9C%BC%E7%BB%BF%E8%89%B2"><span class="toc-number">1.4.</span> <span class="toc-text">编辑器背景改为护眼绿色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E9%AB%98%E9%A2%91%E7%8E%87%E4%BD%BF%E7%94%A8%E7%9A%84%E8%8F%9C%E5%8D%95%E4%B8%BA%E7%83%AD%E9%94%AE"><span class="toc-number">1.5.</span> <span class="toc-text">绑定高频率使用的菜单为热键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E6%97%B6%E8%87%AA%E5%8A%A8%E4%BF%AE%E6%AD%A3%E5%86%85%E5%AE%B9"><span class="toc-number">1.6.</span> <span class="toc-text">Java文件保存时自动修正内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4java%E8%8C%83%E5%9E%8B%E8%BF%87%E5%A4%9A%E9%AA%8C%E8%AF%81"><span class="toc-number">1.7.</span> <span class="toc-text">去除java范型过多验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E6%8E%89%E5%AE%9E%E6%97%B6%E9%AA%8C%E8%AF%81"><span class="toc-number">1.8.</span> <span class="toc-text">去掉实时验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%8F%E5%B0%91%E9%9D%9E%E5%BF%85%E8%A6%81%E5%90%AF%E5%8A%A8%E9%A1%B9"><span class="toc-number">1.9.</span> <span class="toc-text">减少非必要启动项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">2.</span> <span class="toc-text">插件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spket"><span class="toc-number">2.1.</span> <span class="toc-text">spket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#start-explorer"><span class="toc-number">2.2.</span> <span class="toc-text">start explorer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#emmet"><span class="toc-number">2.3.</span> <span class="toc-text">emmet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hibernate-tools"><span class="toc-number">2.4.</span> <span class="toc-text">hibernate tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OS-X-Eclipse-Launcher"><span class="toc-number">2.5.</span> <span class="toc-text">OS X Eclipse Launcher</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/理论实践/" title="理论实践">理论实践<sup>2</sup></a></li>
+		
+			<li><a href="/categories/职业生涯/" title="职业生涯">职业生涯<sup>6</sup></a></li>
+		
+			<li><a href="/categories/随想/" title="随想">随想<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>1</sup></a></li>
+		
+			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/java/" title="java">java<sup>1</sup></a></li>
+		
+			<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		
+			<li><a href="/tags/pacman/" title="pacman">pacman<sup>1</sup></a></li>
+		
+			<li><a href="/tags/rest-api/" title="rest api">rest api<sup>1</sup></a></li>
+		
+			<li><a href="/tags/回忆/" title="回忆">回忆<sup>6</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+        </div>
+        <footer><div id="footer">
+    
+    <div class="line">
+        <span></span>
+        <div class="author"></div>
+    </div>
+    
+    
+    <section class="info">
+        <p> I am a software engineer since 2008. <br/>
+            I like cool stuff and this is my blog to share with you. </p>
+    </section>
+    
+    <div class="social-font" class="clearfix">
+        
+        
+        
+        <a href="https://github.com/joecliff" target="_blank" title="github"></a>
+        
+        
+    </div>
+    <p class="copyright" style="font-family: sans-serif;font-size: 0.8em">
+        <!--Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by-->
+        <!--<a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a>-->
+        Copyright © 2021 Joecliff
+        |
+        <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">苏ICP备17050239号-1</a>
+        |
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32050602010304"
+           style="text-decoration:none;">
+            <span><img src="/img/beian.png" style="margin-bottom: -2px;width: 16px;height: 16px;"/>苏公网安备32050602010304号</span>
+        </a>
+    </p>
+</div>
+</footer>
+        <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+      </div>
+  </body>
+</html>

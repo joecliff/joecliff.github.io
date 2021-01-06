@@ -1,0 +1,407 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>我的技术十年(3) - 开发语言 | Joecliff&#39;s Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Joecliff">
+    
+    <meta name="description" content="软件开发语言，体现的是作者软件开发及设计的思想。开发语言派系林立，但是又都自成体系。
+语言有很多层次分类，以下仅从前后端角度列举我常用的语言或者框架.
+后端JavaJava是个老兵，但也不断的在冒新芽。强大的工业级开源社区保证了Java体系的健壮，诞生了一大批优良的框架，如Spring, Hadoo">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <div id="wrapper">
+        <header>
+          <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Joecliff&#39;s Tech Blog" title="Joecliff&#39;s Tech Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Joecliff&#39;s Tech Blog">Joecliff&#39;s Tech Blog</a></h1>
+				<h2 class="blog-motto">Enjoy thinking and coding ~</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">存档</a></li>
+					
+						<li><a href="/about-me">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:joecliff.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+        </header>
+        <div id="container">
+          <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a target="_blank" rel="noopener" href="//ten-years-of-my-tech-life---dev-language.html" title="我的技术十年(3) - 开发语言" itemprop="url">我的技术十年(3) - 开发语言</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://joecliff.com" title="Joecliff">Joecliff</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2017-04-28T13:36:22.000Z" itemprop="datePublished">2017年04月28日</time>
+    <!--Updated:<time datetime="2021-01-06T06:41:56.181Z" itemprop="dateModified">2021年01月06日</time>-->
+    <!---->
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-number">1.</span> <span class="toc-text">后端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java"><span class="toc-number">1.1.</span> <span class="toc-text">Java</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">1.2.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ruby"><span class="toc-number">1.3.</span> <span class="toc-text">Ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs"><span class="toc-number">1.4.</span> <span class="toc-text">Nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP"><span class="toc-number">1.5.</span> <span class="toc-text">PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC"><span class="toc-number">1.6.</span> <span class="toc-text">脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-number">2.</span> <span class="toc-text">前端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Extjs-Dojo"><span class="toc-number">2.1.</span> <span class="toc-text">Extjs&#x2F;Dojo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery"><span class="toc-number">2.2.</span> <span class="toc-text">jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bootstrap"><span class="toc-number">2.3.</span> <span class="toc-text">bootstrap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#angularjs1-2"><span class="toc-number">2.4.</span> <span class="toc-text">angularjs1&#x2F;2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ionic1-2"><span class="toc-number">2.5.</span> <span class="toc-text">ionic1&#x2F;2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vuejs1-2"><span class="toc-number">2.6.</span> <span class="toc-text">vuejs1&#x2F;2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactjs-react-native"><span class="toc-number">2.7.</span> <span class="toc-text">reactjs&#x2F;react-native</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grunt-gulp"><span class="toc-number">2.8.</span> <span class="toc-text">grunt, gulp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#seajs-requirejs-gt-browserify-webpack"><span class="toc-number">2.9.</span> <span class="toc-text">seajs&#x2F;requirejs -&gt; browserify&#x2F;webpack</span></a></li></ol></li></ol>
+		</div>
+		
+		<p>软件开发语言，体现的是作者软件开发及设计的思想。开发语言派系林立，但是又都自成体系。</p>
+<p>语言有很多层次分类，以下仅从前后端角度列举我常用的语言或者框架.</p>
+<h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><p>Java是个老兵，但也不断的在冒新芽。强大的工业级开源社区保证了Java体系的健壮，诞生了一大批优良的框架，如Spring, Hadoop。</p>
+<p>我经历的项目大概70%以上都有Java的参与。</p>
+<p>Java语言在传统后端语言中算是入门比较简单，开发比较省事的类型。但是其强大的虚拟机同时也是资源消耗大户，对于小型、快速开发类型的项目并不一定合适，</p>
+<h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><p>Python是门相当强大的小众语言，其支持命令式、面向对象、函数式编程的特点使其应用相当广泛。</p>
+<p>Python很多情况可代替shell脚本，自动运维方面不少开源框架都是Python写的。</p>
+<p>正式因为以上原因，我主要用Python来做些脚本化程序，如抓数据、做自动化打包、自动化发布、服务器初始化等。</p>
+<h3 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h3><p>Ruby和Python地位类似，但是更强调OOP。著名的Ruby on Rails框架影响了一大批后来者。</p>
+<p>由于很多开源Web软件都是Ruby写的，如gitlab，所以搞懂Ruby对这些软件的使用大有裨益。</p>
+<h3 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h3><p>把JS这种原本设计简陋的前端语言用在后端，之前是没人敢想的事情。然而Chrome的V8引擎出来后有人想到了这个事情，而且效果出人意料。</p>
+<p>后端的Nodejs默认还是单进程单线程的事件处理机制，但是类似Nginx的事件机制，处理效率相当高。</p>
+<p>目前的Nodejs社区比很多年前的Java社区还要热，不管是前段后端，甚至完全没有经验的人都可以参与进去，发布自已的node组件。</p>
+<p>同时Nodejs改变了前几年的发展缓慢做法，新特性、标准的不断引入让其有了更强大的底气。</p>
+<p>我用Nodejs写过好几个中小项目，做API服务、渲染网页等。Promise、Generator等异步编程方式的引入让异步代码书写友好很多。</p>
+<h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h3><p>提到PHP，大概很多人想到的就是WordPress等一众写博客、开网站的开源软件。</p>
+<p>虽然多进程模型让PHP处理高并发并不像其他后端语言那么高效，但是对于一般中小网站服务这种场景确实足够了。</p>
+<p>当然，像facebook那种从头写个PHP虚拟机来提升PHP能力的案例也有，但并不具有普遍性。</p>
+<p>我用PHP也是因为公司用到了一款OC电商软件，甚至最后重写来提升其不足之处。</p>
+<p>PHP优点很明显，缺点也很明显。不过没必要太较真，取其精华，去其糟粕就可以了。</p>
+<h3 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h3><p>常用的脚本有windows的批处理脚本和linux的shell脚本。</p>
+<p>相对来说，shell脚本要强大的多，也是我的最爱。</p>
+<p>当然，其实服务端运维、自动化处理等很多场景是必须要编写shell脚本的，所以不爱也不行 ㄟ( ▔, ▔ )ㄏ</p>
+<h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><h3 id="Extjs-Dojo"><a href="#Extjs-Dojo" class="headerlink" title="Extjs/Dojo"></a>Extjs/Dojo</h3><p>Extjs和Dojo都是很强大的前端JS组件库，适合重逻辑、交互的后台系统。</p>
+<p>Extjs是我最早接触的前端JS框架，并用其实现了几个强大的后台管理系统。其组件化、OOP思想在那时候还是比较有特色的。</p>
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><p>jQuery追求简单高效解决问题。链式写法，统一的作用域，方便的插件书写机制等，无不透露出其设计思想。</p>
+<p>由于以上原因，jQuery在前端社区中相当普及。各种开源小插件基本能满足绝大部分网站开发需求。</p>
+<p>当然，也是由于jQuery的入门简单，包括插件机制其实也比较简陋，所以容易造成各个插件产生冲突。</p>
+<h3 id="bootstrap"><a href="#bootstrap" class="headerlink" title="bootstrap"></a>bootstrap</h3><p>前端的UI库相当多，bootstrap是其中的典型代表之一。是快速构原型网站的绝佳库。</p>
+<h3 id="angularjs1-2"><a href="#angularjs1-2" class="headerlink" title="angularjs1/2"></a>angularjs1/2</h3><p>虽然作为实验项目启动，但是angularjs 1的设计思想确实影响了一堆前端框架。双向绑定相比jQuery等的dom查询、修改做法绝对能实现指数级的效率提升。</p>
+<p>但是angularjs1的基础设计造成了其性能一直有问题。</p>
+<p>于是angular团队提出了angularjs2的开发计划，优先考虑性能问题，拥抱最新js标准（支持es6/TypeScript），通过webpack高效合并压缩，并解决浏览器兼容性问题。</p>
+<p>虽然angular2不兼容angular1，可能导致之前在angular1上的投资打水漂，但是新框架的高起点、高标准肯定会给后续的采用者带来较长期的红利。</p>
+<h3 id="ionic1-2"><a href="#ionic1-2" class="headerlink" title="ionic1/2"></a>ionic1/2</h3><p>ionic是基于angular基础上开发的移动端UI框架。由于完全采用原生语言开发APP成本高昂，以ionic为代表的高质量框架很瘦欢迎。</p>
+<p>ionic2在迁移到angular2上后，配以全新的ionic-native插件生态，以一个更强大的姿态展现给了开发者。</p>
+<h3 id="vuejs1-2"><a href="#vuejs1-2" class="headerlink" title="vuejs1/2"></a>vuejs1/2</h3><p>vuejs可以看做国内的angularjs/reactjs，其设计思想也基本参考这些国外流行框架。</p>
+<p>可能因为是国人打造的，而且质量也不错，所以目前国内还蛮流行。</p>
+<h3 id="reactjs-react-native"><a href="#reactjs-react-native" class="headerlink" title="reactjs/react-native"></a>reactjs/react-native</h3><p>reactjs推出堪称里程碑式的事件。虚拟dom这种设计真的是很天才。</p>
+<p>reactjs作为性能优先的前端框架，加上没有造太多概念，而是拥抱js标准，所以入门很快，目前使用的个人和公司都很多。</p>
+<p>react-native是虚拟dom设计之后自然延伸到原生APP开发的产物。</p>
+<p>只写JS，但是拥有媲美原生开发的性能，相当美好。</p>
+<h3 id="grunt-gulp"><a href="#grunt-gulp" class="headerlink" title="grunt, gulp"></a>grunt, gulp</h3><p>两个流行的前端构建工具，可以写自动化的前端处理流程，如压缩，编译less、sass等。</p>
+<p>gulp相比grunt，使用了管道的概念来更方便的组织任务流，相对更易编程实现。</p>
+<h3 id="seajs-requirejs-gt-browserify-webpack"><a href="#seajs-requirejs-gt-browserify-webpack" class="headerlink" title="seajs/requirejs -&gt; browserify/webpack"></a>seajs/requirejs -&gt; browserify/webpack</h3><p>seajs/requirejs是前一代前端代码模块化的工具。其CMD/AMD依赖声明方式可以很有效的理清前端模块逻辑。</p>
+<p>browserify/webpack的出现带来了更智能的方案，可以实现代码预编译，正式环境只用跑处理过的压缩代码，可以运行得更快更兼容。webpack相对于browserify，可以更好的使用nodejs的资源和规范统一前后端。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/回忆/">回忆</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF/">职业生涯</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://joecliff.com/ten-years-of-my-tech-life---dev-language.html" data-title="我的技术十年(3) - 开发语言 | Joecliff&#39;s Tech Blog" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a target="_blank" rel="noopener" href="//ten-years-of-my-tech-life---technical-architecture.html" title="我的技术十年(4) - 技术架构">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  我的技术十年(4) - 技术架构</span>
+</a>
+</div>
+
+
+<div class="next">
+<a target="_blank" rel="noopener" href="//ten-years-of-my-tech-life---projects.html"  title="我的技术十年(2) - 项目篇">
+ <strong>NEXT:</strong><br/> 
+ <span>我的技术十年(2) - 项目篇
+</span>
+</a>
+</div>
+
+</nav>
+
+	<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+    var cloudTieConfig = {
+        url: document.location.href,
+        sourceId: "",
+        productKey: "27bac76fc0894a8ba4295a688ea48e20",
+        target: "cloud-tie-wrapper"
+    };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+
+</div>
+          <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-number">1.</span> <span class="toc-text">后端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java"><span class="toc-number">1.1.</span> <span class="toc-text">Java</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python"><span class="toc-number">1.2.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ruby"><span class="toc-number">1.3.</span> <span class="toc-text">Ruby</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nodejs"><span class="toc-number">1.4.</span> <span class="toc-text">Nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP"><span class="toc-number">1.5.</span> <span class="toc-text">PHP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC"><span class="toc-number">1.6.</span> <span class="toc-text">脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-number">2.</span> <span class="toc-text">前端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Extjs-Dojo"><span class="toc-number">2.1.</span> <span class="toc-text">Extjs&#x2F;Dojo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery"><span class="toc-number">2.2.</span> <span class="toc-text">jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bootstrap"><span class="toc-number">2.3.</span> <span class="toc-text">bootstrap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#angularjs1-2"><span class="toc-number">2.4.</span> <span class="toc-text">angularjs1&#x2F;2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ionic1-2"><span class="toc-number">2.5.</span> <span class="toc-text">ionic1&#x2F;2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vuejs1-2"><span class="toc-number">2.6.</span> <span class="toc-text">vuejs1&#x2F;2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reactjs-react-native"><span class="toc-number">2.7.</span> <span class="toc-text">reactjs&#x2F;react-native</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grunt-gulp"><span class="toc-number">2.8.</span> <span class="toc-text">grunt, gulp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#seajs-requirejs-gt-browserify-webpack"><span class="toc-number">2.9.</span> <span class="toc-text">seajs&#x2F;requirejs -&gt; browserify&#x2F;webpack</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/理论实践/" title="理论实践">理论实践<sup>2</sup></a></li>
+		
+			<li><a href="/categories/职业生涯/" title="职业生涯">职业生涯<sup>6</sup></a></li>
+		
+			<li><a href="/categories/随想/" title="随想">随想<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/IDE/" title="IDE">IDE<sup>1</sup></a></li>
+		
+			<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>1</sup></a></li>
+		
+			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/java/" title="java">java<sup>1</sup></a></li>
+		
+			<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		
+			<li><a href="/tags/pacman/" title="pacman">pacman<sup>1</sup></a></li>
+		
+			<li><a href="/tags/rest-api/" title="rest api">rest api<sup>1</sup></a></li>
+		
+			<li><a href="/tags/回忆/" title="回忆">回忆<sup>6</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+        </div>
+        <footer><div id="footer">
+    
+    <div class="line">
+        <span></span>
+        <div class="author"></div>
+    </div>
+    
+    
+    <section class="info">
+        <p> I am a software engineer since 2008. <br/>
+            I like cool stuff and this is my blog to share with you. </p>
+    </section>
+    
+    <div class="social-font" class="clearfix">
+        
+        
+        
+        <a href="https://github.com/joecliff" target="_blank" title="github"></a>
+        
+        
+    </div>
+    <p class="copyright" style="font-family: sans-serif;font-size: 0.8em">
+        <!--Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by-->
+        <!--<a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a>-->
+        Copyright © 2021 Joecliff
+        |
+        <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn">苏ICP备17050239号-1</a>
+        |
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32050602010304"
+           style="text-decoration:none;">
+            <span><img src="/img/beian.png" style="margin-bottom: -2px;width: 16px;height: 16px;"/>苏公网安备32050602010304号</span>
+        </a>
+    </p>
+</div>
+</footer>
+        <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+      </div>
+  </body>
+</html>
